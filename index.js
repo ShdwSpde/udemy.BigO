@@ -154,6 +154,8 @@ logAtLeastFive(3)
 
 This above will print at least five by doing a comparison. If the argument n passed in is higher, it will run n times. Thus this too is O(n) in regards to time complexity
 
+Space complexity is O(1) since we only have to remember the one total
+
 */
 
 function logAtMostFive(n){
@@ -169,6 +171,8 @@ logAtMostFive(3)
 
 Conversely as this functions grows, it will constantly print 5 no matter the input. Thus the time complexity is O(1)
 
+It also have a space complexity of 0(1)
+
 */
 
 function onlyElementsAtEvenIndex(array) {
@@ -183,8 +187,12 @@ function onlyElementsAtEvenIndex(array) {
 
 onlyElementsAtEvenIndex([5,6,2,7,8,9,4,5])
 
+
+
 /*
 In this latest example, our array work would only count as O(1) but then we do have the loop which makes this an O(n)
+
+The space complexity is also O(n) because the amount of values stored to the array is dependent upon the input
 
 */
 
@@ -205,5 +213,37 @@ subtotals([23,92,12,34,94])
 /*
 
 Once we see that we have to iterate twice through the arrays to complete this function, we know we have an O(n^2)
+
+Tricky but this is actually an O(n) space complexity because even though the time complexity is O(n^2) we still only are returning an array with an amount of values based off our input
+
+*/
+
+
+/*
+
+So far we focused on the runtime of an algorithm based upon the inputs but what about the space complexity or memory used in storage. Can we represent that similarly?
+
+1.Most primitives(booleans,null, undefined,numbers) are constant space
+
+2. Strings require O(n) space where n is the string length
+
+3. Reference types are usually O(n) where n is the length(for arrays) or number of keys(for objects)
+
+
+*/
+
+/*
+
+Recap
+
+1.We use Big O notation to analyze the performance of an algorithm
+
+2. Big O notation can give us an= high level understanding of an algorithm with respect to time and space complexity
+
+3. Big O notation only cares about general trends(constant, linear, quadratic, logarithmic)
+
+4. The time or space complexity depends on the algorithm and not the hardware
+
+5. Big O notation is Everywhere!
 
 */
